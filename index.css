@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+html, body{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:hsl(210, 60%, 98%);
+    font-family:'Plus Jakarta Sans';
+    color:hsl(219, 14%, 63%);
+}
+/***************
+    LAYOUT
+***************/
+.outer-body{
+    width:60%;
+    margin-right: auto;
+    margin-left:auto;
+    background-color: hsl(0, 0%, 100%);
+}
+.message, .special-message{
+    width:100%;
+    margin:0 auto;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    margin:0 auto;
+}
+.head{
+    display:flex;
+    gap:10px;
+}
+.message, .special-message{
+    display:grid;
+    grid-template-columns:40px auto;
+    grid-template-rows:40px;
+    grid-template-areas: 
+    "img text"
+    " .  date";
+    gap: 20px;
+    border-radius:5px;
+    border:none;
+    background-color:hsl(210, 60%, 98%);
+    margin-bottom:10px;
+    align-items: center;
+    width:90%;
+}
+.message img,
+.special-message img,
+.special-message p,
+.message p{
+    padding-left:20px;
+    padding-top:20px;
+    word-spacing: 2px;
+}
+.special-message{
+    background-color: white;
+}
+.inner-special-message{
+    width:75%;
+    border-radius:5px;
+    border:1px solid gainsboro;
+    background-color:hsl(0, 0%, 100%);
+    margin:0 0 10px 10%;
+    padding:10px;
+    cursor:pointer;
+}
+.image{
+    grid-area: img;
+    width:48px;
+    height:48px;   
+}
+.text{
+    grid-area: text;
+    margin:0;
+}
+.date{
+    grid-area: date;
+    margin-top:0;
+}
+.notification-sign{
+    background-color:hsl(1, 90%, 64%);
+    border-radius:50%;
+    border:none;
+    width:5px;
+    height:12px;
+    display:inline-block;
+}
+.show{
+    display: none;
+}
+/************
+TYPOGRAPHY
+*************/
+.name{
+    color:black;
+    font-weight: 800;
+    padding-right:5px;
+    cursor:pointer;
+}
+.notification-number{
+    background-color:hsl(224, 21%, 14%);
+    color:#fff;
+    border-radius: 5px;
+    padding:4px 16px;
+    align-self:center;
+}
+.bold-text{
+    color:hsl(219, 85%, 26%);
+    font-weight:700;
+    cursor:pointer;
+}
+.mark-messages{
+    cursor:pointer;
+}
+@media (hover: hover) {
+    .name:hover {
+      color:hsl(219, 85%, 26%);
+    }
+    .inner-special-message:hover{
+        background-color: hsl(210, 60%, 98%);
+    }
+  }
+@media screen and (max-width:768px) and (min-width:375px){
+    .outer-body{
+        width:100%;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .message, .special-message{
+        width:95%;
+        margin:0 auto;
+    }
+    header{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:90%;
+        margin:0 auto;
+    }
+    .head{
+        display:flex;
+        gap:10px;
+    }
+}
